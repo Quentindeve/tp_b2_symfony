@@ -80,7 +80,17 @@ symfony console doctrine:migrations:migrate
 = Création du formulaire de création d'User
 #linebreak()
 
-Parce que ce n'est pas le sujet ici, *l'Entity User est déjà créée*. Par contre le formulaire d'inscription et de connexion des User ne sont pas créés. Ca va être à vous de le faire, mais vous ne serez pas largués !
+On va commencer par créer notre table User. L'utilisateur doit être identifié par un username.
+```sh
+symfony console make:user
+```
+
+Modifiez ensuite la table *Comment* avec:
+```sh
+symfony console make:entity Comment
+```
+
+Rajoutez une colonne *publisher* qui référence l'user ayant écrit le commentaire. Gardez bien en tête que l'utilisateur peut avoir écrit autant de commentaires qu'il veut, mais qu'un commentaire est écrit par exactement une personne. 
 
 #linebreak()
 

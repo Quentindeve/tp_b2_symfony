@@ -40,7 +40,7 @@ On va réaliser un site où des posts peuvent être créés par tout le monde (y
 
 On dispose donc de 3 tables:
 
-- La table *Post*, qui contient tous les posts, avec leur auteur, leur contenu leur titre et leur commentaires.
+- La table *Post*, qui contient tous les posts, avec leur contenu leur titre et leurs commentaires.
 
 - La table *Comment* contenant tous les commentaires, avec le post visé, l'auteur du commentaire et son contenu.
 

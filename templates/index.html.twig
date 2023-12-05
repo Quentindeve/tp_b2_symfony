@@ -1,13 +1,36 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	<h1>Bonjour !</h1>
+	<h1>Bonjour !
+		{# Question 4 Début #}
+		{% if is_connected %}
+			Je vois que tu es connecté en tant que
+			{{ username }}
+		{% endif %}
+		{# Fin Question 4 #}
+	</h1>
 	<h2>Ca, c'est l'index de ce site fait avec Symfony</h2>
 	<p>Assurément le prochain GAFAM</p>
 	<p>Ah, et celui qui t'as répondu c'est
 		{{ controller_name }}
 	</p>
-	<a href="/register">Créer un utilisateur</a>
-	<a href="">Créer un Post</a>
-	<a href="">Créer un Commentaire</a>
+
+	{% if not is_connected %}
+		{# Question 2 #}
+		<a href="/register">Créer un utilisateur</a>
+		{# Question 3 #}
+		<a href="/login">Se connecter</a>
+	{% endif %}
+
+	{# Question 6 #}
+	{% if is_connected %}
+		{# Question 5 #}
+		<a href="/logout">Se déconnecter</a>
+	{% endif %}
+
+	<a href="/createpost">Créer un Post</a>
+	<a href="/listposts">Voir les posts</a>
+	<a href="/sendcomment">Créer un Commentaire</a>
+	<a href="/listcomments">Voir les commentaires</a>
+
 {% endblock %}

@@ -1,7 +1,11 @@
 #set document(title: "TP B2 - Contrôleurs et Twig", author: "DUTILLEUL Quentin")
 
-#set page(paper: "presentation-4-3")
-#set text(size: 24pt, font: "Cascadia", weight: "semibold")
+#set page(paper: "presentation-4-3", header: [
+  #figure(
+    image("images/sio.png", width: 10%)
+  )
+])
+#set text(size: 24pt, font: "Cascadia", weight: "medium")
 
 #set heading(numbering: "1.a >")
 

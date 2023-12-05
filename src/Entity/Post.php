@@ -23,7 +23,7 @@ class Post
     private ?string $content = null;
 
     #[ORM\OneToMany(mappedBy: 'post', targetEntity: Comment::class)]
-    private Collection $comments;
+    private ?Collection $comments;
 
     public function __construct()
     {
